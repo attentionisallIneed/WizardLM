@@ -47,7 +47,7 @@ PROMPT_DICT = {
 
 @dataclass
 class ModelArguments:
-    model_name_or_path: Optional[str] = field(default="bigcode/starcoder")
+    model_name_or_path: Optional[str] = field(default=r'D:\large-models\WizardCoder-15B-V1.0')
 
 
 @dataclass
@@ -63,6 +63,8 @@ class TrainingArguments(transformers.TrainingArguments):
         default=512,
         metadata={"help": "Maximum sequence length. Sequences will be right padded (and possibly truncated)."},
     )
+    # set default param
+    output_dir: str = field(default='./outputs')
 
 
 def safe_save_model_for_hf_trainer(trainer: transformers.Trainer, output_dir: str):

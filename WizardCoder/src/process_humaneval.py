@@ -9,10 +9,12 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     '--path',
     type=str,
+    default=r'D:\WizardLM\WizardCoder\data\humaneval.59.8.gen',
     help="")
 parser.add_argument(
     '--out_path',
     type=str,
+    default=r'D:\WizardLM\WizardCoder\data\humaneval.59.8.gen\output',
     help="")
 parser.add_argument(
     '--add_prompt',
